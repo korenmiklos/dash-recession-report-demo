@@ -235,8 +235,8 @@ layout = html.Div([
     > reports using the Dash framework in Python.
 
     ***
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Markdown('''
     ## A Mixed Recovery
@@ -249,8 +249,8 @@ layout = html.Div([
     is back to its pre-recession level, it hasn't added the
     roughly 10 million jobs needed to keep up with growth
     in the working-age population.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Graph(
         figure=create_figure(), id='overview',
@@ -265,8 +265,8 @@ layout = html.Div([
     is less than $22,000 — are growing.
     But so are some high-paying sectors, such as **consulting**,
     **computing** and **biotech**.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Graph(
         figure=create_figure(
@@ -292,8 +292,8 @@ layout = html.Div([
     and all have grown.
     But these gains have not offset losses in other middle-wage
     industries, such as airlines and construction.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Graph(
         figure=create_figure(
@@ -320,8 +320,8 @@ layout = html.Div([
     real estate have lost 19 percent of their jobs since
     the recession began — hundreds of thousands more than
     health care has added.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Graph(
         figure=create_figure(
@@ -349,8 +349,8 @@ layout = html.Div([
     transforming economies in resource-rich places like West Texas
     and North Dakota.
     Many of these industries have average salaries above $70,000.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Graph(
         figure=create_figure(
@@ -372,8 +372,8 @@ layout = html.Div([
     only a fraction of the losses, adding 76,000 jobs.
     Electronic shopping and auctions made up the
      fastest-growing industry, tripling in employment in 10 years.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Graph(
         figure=create_figure(
@@ -393,8 +393,8 @@ layout = html.Div([
     for themselves and their pets.
     Nail salons, which made up one of the most resilient industries,
     were closely rivaled by pet boarding, grooming and training.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     dcc.Graph(
         figure=create_figure(
@@ -409,8 +409,8 @@ layout = html.Div([
     ## And More
     Discover patterns yourself by filtering through industries with
     the dropdown below.
-    '''.replace('  ', ''), className='container',
-    containerProps={'style': {'maxWidth': '650px'}}),
+    ''', className='container',
+    style = {'maxWidth': '650px'}),
 
     html.Div(
         dcc.Dropdown(
@@ -437,15 +437,13 @@ layout = html.Div([
 
     Interested in what you see?
     [Get in touch](https://plot.ly/products/consulting-and-oem/).
-    '''.replace('  ', ''),
+    ''',
         className='container',
-        containerProps={'style': {'maxWidth': '650px'}}
+        style = {'maxWidth': '650px'}
     ),
 
     html.Div(
-        dcc.SyntaxHighlighter(
-            open('report_nyt_255.py', 'r').read(),
-            language='python'
+        dcc.Markdown('```py\n{}\n```'.format(open('report_nyt_255.py', 'r').read()),
         ),
         className='container',
         style={'maxWidth': '650px', 'borderLeft': 'thin solid lightgrey'}
